@@ -31,9 +31,22 @@ Array.prototype.myFilter = function(callbackFn) {
 };
 
 // SOME //
-Array.prototype.mySome = function() {
-
+Array.prototype.mySome = function(callbackFn) {
+    let value = false;
+    for (let i = 0; i < this.length; i++){
+        if (this[i] === undefined) continue;
+        if (callbackFn(this[i], i, this)) {
+            value = true;
+        }
+    }
+    return value
 };
+
+console.log("mySome: ")
+console.log(arr.mySome(function(x, i, arr){return x<1}))
+console.log("Some: ")
+console.log(arr.some(function(x, i, arr){return x<1}))
+
 
 // EVERY //
 Array.prototype.myEvery = function() {
