@@ -1,3 +1,4 @@
+const arr = [1,2,,3]; //testing array
 // FOR EACH //
 Array.prototype.myEach = function() {
 
