@@ -1,6 +1,10 @@
 const arr = [1,2,,3]; //testing array
 // FOR EACH //
-Array.prototype.myEach = function() {
+Array.prototype.myEach = function(callbackFn) {
+    for (let i = 0; i < this.length; i++){
+        if (this[i] === undefined) continue;
+        callbackFn(this[i], i, this);
+    }
 
 };
 
