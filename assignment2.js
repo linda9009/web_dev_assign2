@@ -42,12 +42,6 @@ Array.prototype.mySome = function(callbackFn) {
     return value
 };
 
-console.log("mySome: ")
-console.log(arr.mySome(function(x, i, arr){return x<1}))
-console.log("Some: ")
-console.log(arr.some(function(x, i, arr){return x<1}))
-
-
 // EVERY //
 Array.prototype.myEvery = function() {
 
