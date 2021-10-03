@@ -55,9 +55,6 @@ Array.prototype.myPush = function(...args) {
 
 };
 
-console.log(arr.myPush(6, 5, 3));
-console.log(arr);
-
 // LASTINDEXOF //
 Array.prototype.myLastIndexOf = function() {
 
