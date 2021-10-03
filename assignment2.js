@@ -1,4 +1,4 @@
-const arr = [1,2,3]; //testing array
+const arr = [1,2,,3]; //testing array
 // FOR EACH //
 Array.prototype.myEach = function(callbackFn) {
     for (let i = 0; i < this.length; i++){
@@ -9,9 +9,18 @@ Array.prototype.myEach = function(callbackFn) {
 };
 
 // MAP //
-Array.prototype.myMap = function() {
-
+Array.prototype.myMap = function(callbackFN) {
+    let new_array =[]
+    for (let i = 0; i < this.length; i++){
+        if (this[i] === undefined)  {new_array.push(this[i]); continue;}
+        new_array.push(callbackFN(this[i], i, this))
+    }
+    return new_array
 };
+console.log("map: ")
+console.log(arr.map((x => x*6)))
+console.log("myMap: ")
+console.log(arr.myMap((x => x*6)))
 
 // FILTER //
 Array.prototype.myFilter = function() {
