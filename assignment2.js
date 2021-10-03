@@ -29,10 +29,6 @@ Array.prototype.myFilter = function(callbackFn) {
     }
     return new_array
 };
-console.log("myFilter: ")
-console.log(arr.myFilter(function(x, i, arr){return x>1}))
-console.log("Filter: ")
-console.log(arr.filter(function(x, i, arr){return x>1}))
 
 // SOME //
 Array.prototype.mySome = function() {
