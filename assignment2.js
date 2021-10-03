@@ -17,10 +17,6 @@ Array.prototype.myMap = function(callbackFN) {
     }
     return new_array
 };
-console.log("map: ")
-console.log(arr.map((x => x*6)))
-console.log("myMap: ")
-console.log(arr.myMap((x => x*6)))
 
 // FILTER //
 Array.prototype.myFilter = function() {
