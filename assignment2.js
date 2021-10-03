@@ -43,9 +43,21 @@ Array.prototype.mySome = function(callbackFn) {
 };
 
 // EVERY //
-Array.prototype.myEvery = function() {
-
+Array.prototype.myEvery = function(callbackFn) {
+    let value = true;
+    for (let i = 0; i < this.length; i++){
+        if (this[i] === undefined) continue;
+        if (!callbackFn(this[i], i, this)) {
+            value = false;
+        }
+    }
+    return value
 };
+
+console.log("myEvery: ")
+console.log(arr.myEvery(function(x, i, arr){return x<5}))
+console.log("Every: ")
+console.log(arr.every(function(x, i, arr){return x<5}))
 
 // REDUCE //
 Array.prototype.myReduce = function() {
