@@ -54,11 +54,6 @@ Array.prototype.myEvery = function(callbackFn) {
     return value
 };
 
-console.log("myEvery: ")
-console.log(arr.myEvery(function(x, i, arr){return x<5}))
-console.log("Every: ")
-console.log(arr.every(function(x, i, arr){return x<5}))
-
 // REDUCE //
 Array.prototype.myReduce = function() {
 
