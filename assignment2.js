@@ -87,7 +87,6 @@ Array.prototype.myIndexOf = function(search) {
     }
     return index
 };
-console.log(arr.myIndexOf(5));
 
 // PUSH //
 Array.prototype.myPush = function(...args) {
