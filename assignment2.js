@@ -123,7 +123,11 @@ Object.grabKeys = function(obj) {
 };
 
 // VALUES //
-Object.grabValues = function() {
-
+Object.grabValues = function(obj) {
+    let new_array =[]
+    for (const a in obj){
+        new_array = new_array.concat(obj[a]);
+    }
+    return new_array
 };
 
