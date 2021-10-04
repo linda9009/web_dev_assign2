@@ -1,4 +1,4 @@
-const arr = [1, 2, 3, 4]; //testing array
+const arr = [3, 2, 3, 4]; //testing array
 // FOR EACH //
 Array.prototype.myEach = function(callbackFn) {
     for (let i = 0; i < this.length; i++){
@@ -101,7 +101,15 @@ Array.prototype.myPush = function(...args) {
 };
 
 // LASTINDEXOF //
-Array.prototype.myLastIndexOf = function() {
+Array.prototype.myLastIndexOf = function(search) {
+    let index = -1
+    for (let i = 0; i < this.length; i++){
+        if (this[i] === undefined) continue;
+        if (this[i] === search) {
+            index = i;
+        }
+    }
+    return index
 
 };
 
