@@ -83,11 +83,11 @@ Array.prototype.myIndexOf = function(search) {
         if (this[i] === undefined) continue;
         if (this[i] === search) {
             index = i;
-        }
+            break;
     }
-    return index
+}
+return index
 };
-
 // PUSH //
 Array.prototype.myPush = function(...args) {
     let arg_i = 0;
