@@ -114,8 +114,12 @@ Array.prototype.myLastIndexOf = function(search) {
 };
 
 // KEYS //
-Object.grabKeys = function() {
-
+Object.grabKeys = function(obj) {
+    let new_array =[]
+    for (const a in obj){
+        new_array = new_array.concat(a);
+    }
+    return new_array
 };
 
 // VALUES //
