@@ -1,4 +1,4 @@
-const arr = [1,2,,3]; //testing array
+const arr = [1, 2, 3, 4]; //testing array
 // FOR EACH //
 Array.prototype.myEach = function(callbackFn) {
     for (let i = 0; i < this.length; i++){
@@ -55,8 +55,13 @@ Array.prototype.myEvery = function(callbackFn) {
 };
 
 // REDUCE //
-Array.prototype.myReduce = function() {
-
+Array.prototype.myReduce = function(callbackFn) {
+    let new_val = 0;
+    for (let i = 0; i < this.length; i++){
+        if (this[i] === undefined)continue;
+        new_val = callbackFn(new_val, this[i],i, this)
+    }
+    return new_val;
 };
 
 // INCLUDES //
