@@ -77,9 +77,17 @@ Array.prototype.myIncludes = function(search) {
 };
 
 // INDEXOF //
-Array.prototype.myIndexOf = function() {
-
+Array.prototype.myIndexOf = function(search) {
+    let index = -1
+    for (let i = 0; i < this.length; i++){
+        if (this[i] === undefined) continue;
+        if (this[i] === search) {
+            index = i;
+        }
+    }
+    return index
 };
+console.log(arr.myIndexOf(5));
 
 // PUSH //
 Array.prototype.myPush = function(...args) {
