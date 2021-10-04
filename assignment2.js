@@ -65,8 +65,15 @@ Array.prototype.myReduce = function(callbackFn) {
 };
 
 // INCLUDES //
-Array.prototype.myIncludes = function() {
-
+Array.prototype.myIncludes = function(search) {
+    let value = false;
+    for (let i = 0; i < this.length; i++){
+        if (this[i] === undefined) continue;
+        if (this[i] === search) {
+            value = true;
+        }
+    }
+    return value
 };
 
 // INDEXOF //
