@@ -1,4 +1,4 @@
-const arr = [1, 2, 3, 4]; //testing array
+const arr = [1, 3, 3, 4]; //testing array
 // FOR EACH //
 Array.prototype.myEach = function(callbackFn) {
     for (let i = 0; i < this.length; i++){
@@ -83,9 +83,10 @@ Array.prototype.myIndexOf = function(search) {
         if (this[i] === undefined) continue;
         if (this[i] === search) {
             index = i;
-        }
+            return index
+
     }
-    return index
+}
 };
 
 // PUSH //
